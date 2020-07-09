@@ -7,6 +7,7 @@ import {BrowserRouter as Router,
         useRouteMatch,
         useParams
 } from 'react-router-dom';
+import TodoList from './todoList/todoList';
 
 export default function App() {
   return (
@@ -25,6 +26,9 @@ export default function App() {
             <li>
               <Link to="/topics">Topics</Link>
             </li>
+            <li>
+              <Link to="/todoList">TodoList</Link>
+            </li>
           </ul>
         </nav>
 
@@ -38,8 +42,11 @@ export default function App() {
           <Route path="/topics">
             <Topics />
           </Route>
+          <Route path="/todoList">
+            <TodoList />
+          </Route>
           <Route path="/">
-            <Home />
+            <TodoList />
           </Route>
         </Switch>
       </div>
