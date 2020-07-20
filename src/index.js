@@ -8,6 +8,7 @@ import {BrowserRouter as Router,
         useParams
 } from 'react-router-dom';
 import TodoList from './todoList/todoList';
+import AntdWrapper from './antd/AntdWrapper';
 
 export default function App() {
   return (
@@ -29,6 +30,9 @@ export default function App() {
             <li>
               <Link to="/todoList">TodoList</Link>
             </li>
+            <li>
+              <Link to="/antdWrapper">AntdWrapper</Link>
+            </li>
           </ul>
         </nav>
 
@@ -44,6 +48,9 @@ export default function App() {
           </Route>
           <Route path="/todoList">
             <TodoList />
+          </Route>
+          <Route path="/antdWrapper">
+            <AntdWrapper />
           </Route>
           <Route path="/">
             <TodoList />
