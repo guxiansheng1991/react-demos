@@ -9,6 +9,7 @@ import {BrowserRouter as Router,
 } from 'react-router-dom';
 import TodoList from './todoList/todoList';
 import AntdWrapper from './antd/AntdWrapper';
+import ReactBootstrapWrapper from './reactBootstrap/ReactBootstrapWrapper';
 
 export default function App() {
   return (
@@ -33,6 +34,9 @@ export default function App() {
             <li>
               <Link to="/antdWrapper">AntdWrapper</Link>
             </li>
+            <li>
+              <Link to="/reactBootstrap">ReactBootstrap</Link>
+            </li>
           </ul>
         </nav>
 
@@ -51,6 +55,9 @@ export default function App() {
           </Route>
           <Route path="/antdWrapper">
             <AntdWrapper />
+          </Route>
+          <Route path="/reactBootstrap">
+            <ReactBootstrapWrapper />
           </Route>
           <Route path="/">
             <TodoList />
